@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <img src="logo alazar.png" alt="Logo Sekolah" class="logo">
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="kontak.html">Hubungi Kami</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Masuk</button>
+        <p id="error-message" style="color: red; display: none;">Username atau password salah!</p>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            if (username === 'admin' && password === '1234') {
+                window.location.href = 'index.html'; // Redirect ke index.html
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
